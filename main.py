@@ -677,19 +677,20 @@ if __name__ == "__main__":
         publish_reports_to_metaculus=publish_to_metaculus,
         folder_to_save_reports_to=None,
         skip_previously_forecasted_questions=True,
-        extra_metadata_in_explanation=True,
-        # llms={
-        #     "default": GeneralLlm(
-        #         model="openrouter/openai/gpt-4o",
-        #         temperature=0.3,
-        #         timeout=40,
-        #         allowed_tries=2,
-        #     ),
-        #     "summarizer": "openai/gpt-4o-mini",
-        #     "researcher": "asknews/news-summaries",
-        #     "parser": "openai/gpt-4o-mini",
-        # },
-    )
+extra_metadata_in_explanation=True,
+
+llms={
+    "default": GeneralLlm(
+        model="openrouter/openai/gpt-4o",
+        temperature=0.3,
+        timeout=40,
+        allowed_tries=2,
+    ),
+    "summarizer": GeneralLlm(model="openrouter/openai/gpt-4o"),
+    "researcher": GeneralLlm(model="openrouter/openai/gpt-4o"),
+    "parser": GeneralLlm(model="openrouter/openai/gpt-4o"),
+},
+)
 
     # Per-mode tournament URL shown in the summary banner footer. These
     # piggyback on the forecasting_tools SDK constants and need updating
