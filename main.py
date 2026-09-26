@@ -685,10 +685,20 @@ llms={
         temperature=0.3,
         timeout=40,
         allowed_tries=2,
+        max_tokens=3500,
     ),
-    "summarizer": GeneralLlm(model="openrouter/openai/gpt-4o"),
-    "researcher": GeneralLlm(model="openrouter/openai/gpt-4o"),
-    "parser": GeneralLlm(model="openrouter/openai/gpt-4o"),
+    "summarizer": GeneralLlm(
+        model="openrouter/openai/gpt-4o",
+        max_tokens=3500,
+    ),
+    "researcher": GeneralLlm(
+        model="openrouter/openai/gpt-4o",
+        max_tokens=3500,
+    ),
+    "parser": GeneralLlm(
+        model="openrouter/openai/gpt-4o",
+        max_tokens=3500,
+    ),
 },
 )
 
