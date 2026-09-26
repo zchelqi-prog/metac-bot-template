@@ -88,7 +88,7 @@ class SummerTemplateBot2026(ForecastBot):
         ...
         llms={  # choose your model names or GeneralLlm llms here, otherwise defaults will be chosen for you
             "default": GeneralLlm(
-                model="openrouter/openai/gpt-4o", # "anthropic/claude-sonnet-4-20250514", etc (see docs for litellm)
+                model="openrouter/openrouter/free", # "anthropic/claude-sonnet-4-20250514", etc (see docs for litellm)
                 temperature=0.3,
                 timeout=40,
                 allowed_tries=2,
@@ -685,19 +685,19 @@ llms={
         temperature=0.3,
         timeout=40,
         allowed_tries=2,
-        max_tokens=3500,
+        max_tokens=3000,
     ),
     "summarizer": GeneralLlm(
-        model="openrouter/openai/gpt-4o",
-        max_tokens=3500,
+        model="openrouter/openrouter/free",
+        max_tokens=3000,
     ),
     "researcher": GeneralLlm(
-        model="openrouter/openai/gpt-4o",
-        max_tokens=3500,
+        model="openrouter/openrouter/free",
+        max_tokens=3000,
     ),
     "parser": GeneralLlm(
-        model="openrouter/openai/gpt-4o",
-        max_tokens=3500,
+        model="openrouter/openrouter/free",
+        max_tokens=3000,
     ),
 },
 )
